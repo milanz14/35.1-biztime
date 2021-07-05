@@ -7,6 +7,7 @@ const invoicesRoutes = require("./routes/invoices");
 
 app.use(express.json());
 app.use("/companies", companiesRoutes);
+app.use("/invoices", invoicesRoutes);
 
 app.use((req, res, next) => {
     const err = new expressError("Not Found", 404);
